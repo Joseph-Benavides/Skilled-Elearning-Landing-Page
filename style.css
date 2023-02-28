@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkblue: #13183f;
+    --grey: #787b8e;
+    --hotpink: #f74780;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: linear-gradient(180deg, white, rgb(210, 216, 229));
+    color:var(--darkblue);
+}
+
+.container {
+    margin: 1em auto 0em;
+    width: 90%;
+    max-width: 380px;
+}
+
+/* Utilities */
+button {
+    padding: 0.75em 1.25em;
+    font-family: "Plus Jakarta Sans";
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.opacity:hover {
+    opacity: 0.7;
+}
+
+/* Header */
+.header {
+    margin: 0em 0 2em;
+}
+
+.nav, .footer-el {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0em;
+}
+
+.logo {
+    width: 5em;
+}
+
+.header-btn {
+    background-color: var(--darkblue);
+    color: white;
+}
+
+/* Main */
+.main-title {
+    margin: 0.75em 0;
+    font-size: 2.25rem;
+}
+
+.main-paragraph, .skill-paragraph {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.65em;
+    color: var(--grey);
+}
+
+.main-btn {
+    margin: 2em 0 0em;
+    padding: 0.85em 1.95em;
+    background: linear-gradient(180deg, rgb(255, 111, 72), rgb(240, 42, 166));
+    color: white;
+}
+
+.main-img-mobile {
+    max-width: 99%;
+    width: 340px;
+}
+
+.main-img-tablet, .main-img-desktop {
+    display: none;
+}
+
+
+/* Skill Section */
+.skill {
+    margin: 3em 0em;
+    padding: 1em 1.5em;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.skill-info {
+    margin: 0em auto 2.5em;
+    padding: 1.25em 1.65em;
+    max-width: 350px;
+    min-width: 200px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: linear-gradient(180deg, rgb(255, 111, 72), rgb(240, 42, 166));
+    color: white;
+    border-radius: 10px;
+}
+
+.skill-img {
+    position: absolute;
+    top: -30px;
+    width: 50px;
+}
+
+.skill-header {
+    margin-top: 0.5em;
+    font-size: 1.5rem;
+}
+
+.skill-paragraph {
+    margin: 1em 0;
+    font-size: 1rem;
+}
+
+.skill-btn {
+    margin: 0.5em 0;
+    padding: 0.25rem;
+    font-weight: 600;
+    background-color: white;
+    color: var(--hotpink);
+
+}
+
+/* Footer */
+.footer {
+    background-color: var(--darkblue);
+}
+
+.footer-el {
+    margin-top: 3em;
+    padding: 2em 0;
+}
+
+.footer-btn {
+    padding: 0.85em 1.7em;
+    background: linear-gradient(180deg, rgb(72, 81, 255), rgb(240, 42, 166));
+    color: white;
+}
+
+.footer-btn:hover{
+    background: linear-gradient(180deg, rgb(108, 115, 249), rgb(235, 117, 192));
+    color: rgba(255, 255, 255, 0.922);
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+    .container {
+        max-width: 650px;
+    }
+    button {
+        font-size: 0.875rem;
+    }
+    .logo {
+        width: 6em;
+    }
+    .header-btn {
+        z-index: 2;
+    }
+    .main {
+        overflow-x: clip;
+    }
+    .main-info {
+        display: flex;
+        position: relative;
+    }
+    .main-info-sec-1 {
+        width: 328px;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .main-img-mobile {
+        display: none;
+    }
+    .main-img-tablet {
+        display: unset;
+        position: absolute;
+        width: 410px;
+        bottom: -20px;
+        right: -124px;
+    }
+    .skill-section {
+        margin-top: 2.5em;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1em;
+    }
+    .skill {
+        margin: 1.5em 0em;
+    }
+    .skill-info {
+        margin: 1.25em auto 1.25em;
+        padding: 1.75em 1.65em;
+    }
+}
+
+@media (min-width: 1050px) {
+    .container {
+        max-width: 1150px;
+    }
+    button {
+        font-size: 0.9rem;
+    }
+    .logo {
+        width: 7em;
+    }
+    .main-info {
+        margin-top: 5em;
+    }
+    .main-info-sec-1 {
+        width: 470px;
+    }
+    .main-title {
+      font-size: 3.5rem;  
+    }
+    .main-paragraph {
+        font-size: 1.2rem;
+    }
+    .main-img-tablet {
+        display: none;
+    }
+    .main-img-desktop {
+        display: unset;
+        position: absolute;
+        width: 750px;
+        bottom: -65px;
+        right: -290px;
+    }
+    .skill-section-container {
+        display: flex;
+        justify-content: center;
+    }
+    .skill-section {
+        margin-top: 4.5em;        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(200px, 330px));
+        grid-gap: 1em 2em;
+    }
+    .skill-info {
+        max-width: unset;
+    }
+}
